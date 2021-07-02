@@ -34,13 +34,15 @@
   - So, `Kiki` will say to `one node in network` some think like:
   ```javascript
   {
+      // this is just an example
+      // when working with blockchain, every data should be hex
       from: '0xqwohfasfboawboqqwrqwr', // hello, Im kiki
-      value: '10', // today is my best friend birthday, so I want to send 10BTC as gift
+      value: 10, // today is my best friend birthday, so I want to send 10BTC as gift
       to: '0xa102394uiwfhahoihqirwb1', // to who? ofcourse, my best friend - Chris
-      gas: '0.001', // yeah I know I know, this is your work fee bro
-      gasPrice: '0.001', // what the fuck? you boss (network fee) want to a bit also? no problem, here he is
-      nonce: '3', // yeah you know, this is thirth times I do something like that,
-      chainId: '1', // yeah yeah, I want to use eth network bro
+      gas: 0.001, // yeah I know I know, this is your work fee bro
+      gasPrice: 0.001, // what the fuck? you boss (network fee) want to a bit also? no problem, here he is
+      nonce: 3, // yeah you know, this is thirth times I do something like that,
+      chainId: 1, // yeah yeah, I want to use eth network bro
   }
     ``` 
     - That is the story, how we create a `transaction`
@@ -63,6 +65,22 @@
 - For each `SM` it will do different things, depends on what developer want
 - Some `SM` using for `Swap`, some `SM` using for `multiSend` (more than 1 `receiver` in 1 `transaction`),...
 - As a client, we need `ABI` to know the `SM interface`, and we got the `params` and `params type` also 
+- Example: `Karim` one to send `10 BTC` to `Kiki` and another `10 BTC` to `Chris` as gift, so he will send `20 BTC` to `SM` and `SM` will send `10 BTC` to `Kiki` and `10 BTC` to `Chris` story will look like this
+  ```javascript
+  {
+      // this is just an example
+      // when working with blockchain, every data should be hex
+      from: '0xqwohfasfboawboqqwrqwr', // hello, Im Karim
+      value: 20, // today is my best friend birthday, so I want to send 10BTC as gift
+      to: '0xa102394uiwfhahoihqirwb1', // so I give you (SM) 20 BTC, can you help me send to my best friends - Chris & Kiki
+      gas: 0.001, // yeah I know I know, this is your work fee bro
+      gasPrice: 0.001, // what the fuck? you boss (network fee) want to a bit also? no problem, here he is
+      nonce: 3, // yeah you know, this is thirth times I do something like that,
+      chainId: 1, // yeah yeah, I want to use eth network bro
+      data: '0xq9wpgfuqwehf9ug1234gfhaildsjbva;sdfaasdfqweg....', // this data has been encode as hex with ABI
+  }
+    ``` 
+
 
 
 ### 3. Refer link
