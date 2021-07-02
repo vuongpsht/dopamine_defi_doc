@@ -70,3 +70,11 @@
 - [Generate and sign bitcoin transaction](https://github.com/bitcoinjs/bitcoinjs-lib/blob/27a840aac4a12338f1e40c54f3759bbd7a559944/test/integration/transactions.spec.ts#L11)
 - [Alcoin Smart contract](https://web3js.readthedocs.io/en/v1.3.4/web3-eth-contract.html)
 - [Alcoin ABI](https://web3js.readthedocs.io/en/v1.3.4/web3-eth-abi.html)
+
+## III. Network
+- For almost crypto currency, they will have a network
+- In bassic, it is a lot of miner (node) created
+- When you want to interactive to network, you need to connect to one node
+- 2 main things is `rpc` and `chainId`
+    - `rpc` like a domain, and `chainId` is network id [binance network](https://docs.binance.org/smart-chain/developer/rpc.html)
+- As a client with `web3JS`, we have 2 ways to connect to network [`Https` and `websocket`](https://web3js.readthedocs.io/en/v1.3.4/web3-eth.html#configuration)
